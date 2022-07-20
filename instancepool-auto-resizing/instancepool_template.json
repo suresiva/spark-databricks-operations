@@ -1,0 +1,24 @@
+{
+    "instance_pool_name": "sample_scoring_pool",
+    "node_type_id": "Standard_D16as_v4",
+    "min_idle_instances": 3,
+    "max_capacity": 10,
+    "idle_instance_autotermination_minutes": 60,
+    "preloaded_spark_versions": "10.4.x-cpu-ml-scala2.12",
+    "enable_elastic_disk": true,
+    "disk_spec": {
+        "disk_count": 1,
+        "disk_size": 1,
+        "disk_type": {
+                "azure_disk_volume_type": "PREMIUM_LRS"
+        }
+    },
+    "azure_attributes": {
+        "availability": "ON_DEMAND_AZURE"
+    },
+    "custom_tags": [
+        {
+                "key": "used-by",
+                "value": "sample scoring"
+        }]
+  }

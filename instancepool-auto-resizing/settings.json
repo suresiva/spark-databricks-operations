@@ -1,0 +1,39 @@
+{
+    "schedules":{
+        "nonbusiness_hours":{
+            "start_time": {
+                "day": "Tuesday",
+                "hour": "17"
+            },
+            "end_time": {
+                "day": "Sunday",
+                "hour": "23"
+            }
+        },
+        "business_hours":{
+            "start_time": {
+                "day": "Tuesday",
+                "hour": "19"
+            },
+            "end_time": {
+                "day": "Friday",
+                "hour": "21"
+            }
+        }
+    },
+    "deployment": {
+        "db_instance_pool":{
+            "instance_pool_name": "sample_scoring_pool",
+            "node_type_id": "Standard_D16s_v3",
+            "max_capacity": 120,
+            "idle_instance_autotermination_minutes": 60,
+            "preloaded_spark_versions": "10.4.x-cpu-ml-scala2.12",
+            "business_hours":{
+                "min_idle_instances": 6
+            },
+            "nonbusiness_hours":{
+                "min_idle_instances": 3
+            }
+        }
+    }
+}
